@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 
 from storage import get_playlist_history
 
+plt.rcParams['figure.dpi'] = 600
+
 def main():
     parser = argparse.ArgumentParser(description='Easy Playlist Forecast')
     parser.add_argument('-p', '--playlist_ids', nargs='+', help='Playlist IDs', required=True)
