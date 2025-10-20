@@ -10,7 +10,7 @@ LOG_FILE="$LOG_DIR/debug.log"
 VENV_DIR="$PROJECT_DIR/venv"
 PYTHON_BIN="$VENV_DIR/bin/python3"
 REQUIREMENTS_FILE="$PROJECT_DIR/requirements.txt"
-SCRIPT_PATH="$PROJECT_DIR/easyPriceMonitoeasy_playlist_forecast.py"
+SCRIPT_PATH="$PROJECT_DIR/easy_playlist_forecast.py"
 PLAYLIST_IDS_TO_FORECAST=(2 3)
 
 # Ensure logs directory exists
