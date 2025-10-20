@@ -11,8 +11,11 @@ VENV_DIR="$PROJECT_DIR/venv"
 PYTHON_BIN="$VENV_DIR/bin/python3"
 REQUIREMENTS_FILE="$PROJECT_DIR/requirements.txt"
 SCRIPT_PATH="$PROJECT_DIR/easy_playlist_forecast.py"
-PLAYLIST_IDS_TO_FORECAST=(2 3)
-
+if [ "$#" -gt 0 ]; then
+    PLAYLIST_IDS_TO_FORECAST=("$@") # read playli id's from CLI
+else
+    PLAYLIST_IDS_TO_FORECAST=(2 3) # replace with your playlist id's
+fi
 # Ensure logs directory exists
 mkdir -p "$LOG_DIR"
 
