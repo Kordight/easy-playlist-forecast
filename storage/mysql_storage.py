@@ -28,8 +28,7 @@ def get_playlist_history(db_config, playlist_ids_array):
 
     cursor.execute(query, playlist_ids_array)
     rows = cursor.fetchall()
-    print(f"Pobrano {len(rows)} rekordów z bazy danych.")
-    print(rows[:15])
+    print(f"Downloaded {len(rows)} records from dataBase.")
     cursor.close()
     conn.close()
     return list(rows)
