@@ -172,7 +172,7 @@ def main():
         safe_name = "".join(c for c in str(display_name).strip().replace(' ', '_') if c.isalnum() or c in ('_', '-'))
         filename = f"{safe_name}_forecast_for_{TARGET_DATE.strftime('%Y-%m-%d')}_current_{datetime.now().strftime('%Y-%m-%d')}.png"
         filepath = os.path.join(out_dir, filename)
-        plt.ylim(0, 1300)
+        plt.ylim(0, 1500)
         plt.savefig(filepath)
         plt.close()
         print(f"Saved chart for playlist '{display_name}' ({growth_type}, {freq}) -> {filepath}")
@@ -208,7 +208,7 @@ def main():
         )
         filename = f"combined_{join_names}_forecast_for_{TARGET_DATE.strftime('%Y-%m-%d')}_current_{datetime.now().strftime('%Y-%m-%d')}.png"
         filepath = os.path.join(out_dir, filename)
-        plt.ylim(0, 1300)
+        plt.ylim(0, 1500)
         plt.savefig(filepath)
         plt.close()
         print(f"Saved combined chart -> {filepath}")
